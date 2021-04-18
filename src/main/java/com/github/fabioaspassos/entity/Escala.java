@@ -1,4 +1,4 @@
-package com.github.fabioaspassos.model;
+package com.github.fabioaspassos.entity;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.Set;
 public class Escala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @NotNull
     private String nome;
