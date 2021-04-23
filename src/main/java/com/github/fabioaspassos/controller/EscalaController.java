@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/escala")
 public class EscalaController {
