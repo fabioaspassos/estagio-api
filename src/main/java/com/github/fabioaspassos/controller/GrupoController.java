@@ -14,6 +14,7 @@ import java.util.Set;
 
 @RequiredArgsConstructor
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/grupo")
 public class GrupoController {
@@ -61,6 +62,22 @@ public class GrupoController {
 
         return ResponseEntity.ok(grupoSaved);
     }
+
+    @DeleteMapping("{idGrupo}/aluno/{idAluno}")
+    public ResponseEntity<Grupo> removeAluno(@PathVariable Integer idGrupo, @PathVariable Integer idAluno){
+        Optional<Aluno> optionalAluno = alunoRepository.findById(idAluno);
+        Optional<Grupo> optionalGrupo = grupoRepository.findById(idGrupo);
+        if (!optionalGrupo.isPresent() || !optionalAluno.isPresent()) {
+            return ResponseEntity.unprocessableEntity().build();
+        }
+        Grupo grupo = optionalGrupo.get();
+        grupo.getAlunos().removeIf( a -> a.equals(optionalAluno.get()));
+        Grupo grupoSaved = grupoRepository.save(grupo);
+
+        return ResponseEntity.ok(grupoSaved);
+    }
+
+
 
     @PostMapping("{id}/preceptor")
     public ResponseEntity<Grupo> addPreceptor(@PathVariable Integer id, @RequestBody Preceptor preceptor){

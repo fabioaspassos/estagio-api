@@ -1,41 +1,33 @@
-INSERT INTO pessoa (nome) VALUES ('Allinson Guimarães de Carvalho');
-INSERT INTO pessoa (nome) VALUES ('Raquel Conceição da Silva');
-INSERT INTO pessoa (nome) VALUES ('Bruna Araújo da Silva');
-INSERT INTO pessoa (nome) VALUES ('Larissa Maria Sousa da Silva');
-INSERT INTO pessoa (nome) VALUES ('Rômulo Ribeiro da Silva Júnior');
-INSERT INTO pessoa (nome) VALUES ('Thaís Cláudia Moura do Nascimento');
-INSERT INTO pessoa (nome) VALUES ('Bárbara Luana da Silva');
-INSERT INTO pessoa (nome) VALUES ('Thaina Dárc Santos');
-INSERT INTO pessoa (nome) VALUES ('Eveline Cristina da Silva Cavalcante ');
-INSERT INTO pessoa (nome) VALUES ('Simone Maria de Santana');
-INSERT INTO pessoa (nome) VALUES ('Deborah Oliveira da Silva');
-INSERT INTO pessoa (nome) VALUES ('Maria Alyce Silva do Nascimento');
-INSERT INTO pessoa (nome) VALUES ('Angela Maria Santos de Lima ');
-INSERT INTO pessoa (nome) VALUES ('Sara Santiago Rodrigues');
-INSERT INTO pessoa (nome) VALUES ('Dayane Martins da Silva');
-INSERT INTO pessoa (nome) VALUES ('Daniele Regina Ferreira da Silva');
-INSERT INTO pessoa (nome) VALUES ('Matheus Henrique Lima Martins Carneiro');
-INSERT INTO pessoa (nome) VALUES ('Nadja Maria da Silva Nascimento');
-INSERT INTO pessoa (nome) VALUES ('Heloísa Anselmo da Cunha');
-INSERT INTO pessoa (nome) VALUES ('Carla Josete Silva de Oliveira');
-INSERT INTO pessoa (nome) VALUES ('Andréa Maria Moura da Rocha Cavalcante');
-INSERT INTO pessoa (nome) VALUES ('Ana Flavia dos Santos Felix');
-INSERT INTO pessoa (nome) VALUES ('Ana Vitoria Braga Serrati');
-INSERT INTO pessoa (nome) VALUES ('Edilma Eduarda de Lima Moura ');
-INSERT INTO pessoa (nome) VALUES ('Wilker Bezerra da Silva');
-INSERT INTO pessoa (nome) VALUES ('Dayane Rita de Arruda');
-INSERT INTO pessoa (nome) VALUES ('Ana Caroline Sousa de Araujo ');
-INSERT INTO pessoa (nome) VALUES ('Elania Valeria da Silva');
-INSERT INTO pessoa (nome) VALUES ('Rosenilda Jose Ribeiro de Oliveira');
-INSERT INTO pessoa (nome) VALUES ('Fernanda de França Ribeiro');
-INSERT INTO pessoa (nome) VALUES ('Deborah Monique da Silva');
-INSERT INTO pessoa (nome) VALUES ('Anna Karolina Oliveira da Silva');
+INSERT INTO pessoa (nome) VALUES
+('Raquel Conceição da Silva'),('Bruna Araújo da Silva'),
+('Larissa Maria Sousa da Silva'),('Rômulo Ribeiro da Silva Júnior'),
+('Thaís Cláudia Moura do Nascimento'),('Bárbara Luana da Silva'),
+('Thaina Dárc Santos'),('Eveline Cristina da Silva Cavalcante '),
+('Simone Maria de Santana'),('Deborah Oliveira da Silva'),
+('Maria Alyce Silva do Nascimento'),('Angela Maria Santos de Lima '),
+('Sara Santiago Rodrigues'),('Dayane Martins da Silva'),
+('Daniele Regina Ferreira da Silva'),('Matheus Henrique Lima Martins Carneiro'),
+('Nadja Maria da Silva Nascimento'),('Heloísa Anselmo da Cunha'),
+('Carla Josete Silva de Oliveira'),('Andréa Maria Moura da Rocha Cavalcante'),
+('Ana Flavia dos Santos Felix'),('Ana Vitoria Braga Serrati'),
+('Edilma Eduarda de Lima Moura'),('Wilker Bezerra da Silva'),
+('Dayane Rita de Arruda'),('Ana Caroline Sousa de Araujo '),
+('Elania Valeria da Silva'),('Rosenilda Jose Ribeiro de Oliveira'),
+('Fernanda de França Ribeiro'),('Deborah Monique da Silva'),
+('Anna Karolina Oliveira da Silva'),('Ana Flavia Freire da Paz'),
+('Ana Flávia Emery de Almeida Azevedo'),('Ana Fabiola Ramos Rodrigues de Almeida'),
+('Ana Flávia da Silva Arruda'),('Ana Fernandes da Paz'),
+('Ana Fernanda Shiue'),('Ana Flavia Sousa Andrade Ferreira'),
+('Ana Fernanda de Andrade Silva'),('Ana Francelina de Carvalho'),
+('Ana Flavia dos Santos Felix'),('Allinson Guimarães de Carvalho');
+
 
 INSERT INTO aluno(id_aluno) VALUES
 (1),(2),(3),(4),(5),(6),(7),(8),(9),
 (10),(11),(12),(13),(14),(15),(16),(17),(18),(19),
 (20),(21),(22),(23),(24),(25),(26),(27),(28),(29),
-(30),(31),(32);
+(30),(31),(32),(33),(34),(35),(36),(37),(38),(39),
+(40),(41),(42);
 
 INSERT INTO disciplina (id,descricao, estagio) VALUES
 (9,'ESTÁGIO INTRODUÇÃO A ENFERMAGEM', 1), (10,'ESTÁGIO ENFERMAGEM CLÍNICA MÉDICA', 1),
