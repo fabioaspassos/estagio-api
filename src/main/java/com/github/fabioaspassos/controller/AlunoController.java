@@ -3,6 +3,8 @@ package com.github.fabioaspassos.controller;
 import com.github.fabioaspassos.entity.Aluno;
 import com.github.fabioaspassos.repository.AlunoRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,13 +18,10 @@ public class AlunoController {
     private final AlunoRepository alunoRepository;
 
     @GetMapping("/startingWith/{nome}")
-    public List<Aluno> findByNome(@PathVariable String nome){
-        return alunoRepository.findByNomeStartingWithIgnoreCase(nome);
-    }
+    public List<Aluno> findByNome(@PathVariable String nome,
+                                  Pageable pageable){
 
-    @GetMapping
-    public List<Aluno> findAll(){
-        return alunoRepository.findAll();
+        return alunoRepository.findByNomeStartingWithIgnoreCase(nome, pageable).getContent();
     }
 
 }
