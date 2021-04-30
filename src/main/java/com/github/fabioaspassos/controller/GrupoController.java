@@ -156,7 +156,7 @@ public class GrupoController {
         return ResponseEntity.notFound().build();
     }
 
-    @PostMapping("duplicate/{id}")
+    @PostMapping("{id}/duplicate")
     public ResponseEntity<Grupo> duplicate(@PathVariable Integer id) {
         Optional<Grupo> optionalGrupo = grupoRepository.findById(id);
         if (optionalGrupo.isPresent()){

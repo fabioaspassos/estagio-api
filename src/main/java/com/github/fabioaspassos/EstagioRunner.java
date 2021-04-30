@@ -53,14 +53,6 @@ public class EstagioRunner implements CommandLineRunner {
         e.addGrupo(g);
         escalaRepository.save(e);
 
-        e = new Escala();
-        e.setNome("TURMA-2201-N");
-
-        g = new Grupo();
-        g.setNome("Grupo 2201 A");
-        e.addGrupo(g);
-        escalaRepository.save(e);
-
         escalaRepository.findAll().forEach( escala -> {
             LOGGER.info("Escala: " + escala.getNome());
             escala.getGrupos().forEach( grupo -> {
