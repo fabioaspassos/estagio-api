@@ -1,12 +1,12 @@
 package com.github.fabioaspassos.repository;
 
 import com.github.fabioaspassos.entity.Disciplina;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 public interface DisciplinaRepository extends JpaRepository<Disciplina, Integer> {
 
-    List<Disciplina> findByDescricaoStartingWithIgnoreCase(String descricao);
-    List<Disciplina> findByDescricaoContainingIgnoreCase(String descricao);
+    Page<Disciplina> findByDescricaoStartingWithIgnoreCase(String descricao, Pageable pageable);
+    Page<Disciplina> findByDescricaoContainingIgnoreCase(String descricao, Pageable pageable);
 }

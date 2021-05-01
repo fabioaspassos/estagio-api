@@ -3,7 +3,6 @@ package com.github.fabioaspassos.controller;
 import com.github.fabioaspassos.entity.Aluno;
 import com.github.fabioaspassos.repository.AlunoRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 

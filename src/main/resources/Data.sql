@@ -19,7 +19,17 @@ INSERT INTO pessoa (nome) VALUES
 ('Ana Flávia da Silva Arruda'),('Ana Fernandes da Paz'),
 ('Ana Fernanda Shiue'),('Ana Flavia Sousa Andrade Ferreira'),
 ('Ana Fernanda de Andrade Silva'),('Ana Francelina de Carvalho'),
-('Ana Flavia dos Santos Felix'),('Allinson Guimarães de Carvalho');
+('Ana Flavia dos Santos Felix'),('Allinson Guimarães de Carvalho'),
+('Daniela de Melo Pereira **'),('Carla Maria Mendes da Paixão'),
+('Antonio Sancler Dias dos Santos'),('Roberta Carneiro de Albuquerque'),
+('Professor Padrão'),('Kleyton Siqueira Bezerra'),
+('Vanessa Vasconcelos da Silva'),('Péricles Teixeira da Costa'),
+('Kleber Ambrósio Cavalcanti'),('João Batista Vaz da Silva'),
+('GISELLA CAROLINA GONZAGA DE ARAGÃO NEVES'),('Leiliane Maria Mota'),
+('Elisângela Magalhães da Silva'),('Carla Patrícia dos Santos'),
+('Karla Souza Xavier de Araújo'),('Manoel de Paiva Pessoa Neto'),
+('Suzan Danielle da Paz'),('Geane Gomes da Silva'),
+('JULIANA RODRIGUES DA SILVA'),('Anielle Maria da Silva');
 
 
 INSERT INTO aluno(id_aluno) VALUES
@@ -29,17 +39,23 @@ INSERT INTO aluno(id_aluno) VALUES
 (30),(31),(32),(33),(34),(35),(36),(37),(38),(39),
 (40),(41),(42);
 
+INSERT INTO professor(id_professor) VALUES
+(43),(44),(45),(46),(47),(48),(49),
+(50),(51),(52),(53),(54),(55),(56),(57),(58),(59),
+(60),(61),(62);
+
+
 INSERT INTO disciplina (id,descricao, estagio) VALUES
-(9,'ESTÁGIO INTRODUÇÃO A ENFERMAGEM', 1), (10,'ESTÁGIO ENFERMAGEM CLÍNICA MÉDICA', 1),
-(11,'ESTÁGIO ENFERMAGEM CLÍNICA CIRÚRGICA', 1), (16,'ESTÁGIO ENFERMAGEM MATERNO INFANTIL', 1),
-(17,'ESTÁGIO ENFERMAGEM EM NEUROPSIQUIATRIA', 1), (18,'ESTÁGIO ENFERMAGEM SAÚDE PÚBLICA', 1),
-(26,'ESTÁGIO SUPERVISIONADO - INST', 1), (36,'ESTÁGIO SUPERVISIONADO EM EMPRESAS', 1),
-(54,'ESTÁGIO INTRODUÇÃO A ENFERMAGEM', 1), (55,'ESTÁGIO ENFERMAGEM CLÍNICA MÉDICA', 1),
-(56,'ESTÁGIO ENFERMAGEM CLÍNICA CIRÚRGICA', 1), (61,'ESTÁGIO ENFERMAGEM MATERNO INFANTIL', 1),
-(62,'ESTÁGIO ENFERMAGEM EM NEUROPSIQUIATRIA', 1), (63,'ESTÁGIO ENFERMAGEM SAÚDE PÚBLICA', 1),
-(72,'Estágio Técnicas de Coleta', 1), (73,'Estágio Bioquímica', 1),
-(74,'Estágio Hematologia', 1), (75,'Estágio Imunologia', 1),
-(76,'Estágio Parasitologia / Urinálise', 1), (77,'Estágio Microbiologia', 1);
+(9,'INTRODUÇÃO A ENFERMAGEM', 1), (10,'ENFERMAGEM CLÍNICA MÉDICA', 1),
+(11,'ENFERMAGEM CLÍNICA CIRÚRGICA', 1), (16,'ENFERMAGEM MATERNO INFANTIL', 1),
+(17,'ENFERMAGEM EM NEUROPSIQUIATRIA', 1), (18,'ENFERMAGEM SAÚDE PÚBLICA', 1),
+(26,'SUPERVISIONADO - INST', 1), (36,'SUPERVISIONADO EM EMPRESAS', 1),
+(54,'INTRODUÇÃO A ENFERMAGEM', 1), (55,'ENFERMAGEM CLÍNICA MÉDICA', 1),
+(56,'ENFERMAGEM CLÍNICA CIRÚRGICA', 1), (61,'ENFERMAGEM MATERNO INFANTIL', 1),
+(62,'ENFERMAGEM EM NEUROPSIQUIATRIA', 1), (63,'ENFERMAGEM SAÚDE PÚBLICA', 1),
+(72,'Técnicas de Coleta', 1), (73,'Bioquímica', 1),
+(74,'Hematologia', 1), (75,'Imunologia', 1),
+(76,'Parasitologia / Urinálise', 1), (77,'Microbiologia', 1);
 
 INSERT INTO campo_estagio (id, nome) VALUES
 (1, 'CISAM'),(2, 'PSF 7º RO'),(3, 'Albert Sabin'),
