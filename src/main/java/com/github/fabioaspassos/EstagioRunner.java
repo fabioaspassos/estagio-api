@@ -2,6 +2,7 @@ package com.github.fabioaspassos;
 
 import com.github.fabioaspassos.entity.*;
 import com.github.fabioaspassos.repository.*;
+import com.github.fabioaspassos.service.UserDetailServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +22,21 @@ public class EstagioRunner implements CommandLineRunner {
     private final AlunoRepository alunoRepository;
     private final DisciplinaRepository disciplinaRepository;
     private final CampoEstagioRepository campoEstagioRepository;
+    private final UserDetailServiceImpl userDetailService;
 
     @Override
     public void run(String... args) throws Exception {
+
+        userDetailService.create(
+                Usuario.builder()
+                        .login("admin")
+                        .password("1313")
+                        .admin(true).build());
+        userDetailService.create(
+                Usuario.builder()
+                        .login("user")
+                        .password("12345")
+                        .admin(false).build());
 
         Preceptor preceptor = new Preceptor();
         preceptor.setNome("Professor Padrao");
