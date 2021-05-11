@@ -118,29 +118,24 @@ public class GrupoController {
                 return ResponseEntity.notFound().build();
             }
         }
-        if(grupo.getDisciplina()!=null && grupo.getDisciplina().getId()!=null) {
-            Optional<Disciplina> optionalDisciplina = disciplinaRepository.findById(grupo.getDisciplina().getId());
-            grupo.setDisciplina(null);
-            if (optionalDisciplina.isPresent()) grupo.setDisciplina(optionalDisciplina.get());
-        }
-        if (grupo.getCampoEstagio()!=null && grupo.getCampoEstagio().getId()!=null){
-            Optional<CampoEstagio> optionalCampoEstagio = campoEstagioRepository.findById(grupo.getCampoEstagio().getId());
-            grupo.setCampoEstagio(null);
-            if(optionalCampoEstagio.isPresent()) grupo.setCampoEstagio(optionalCampoEstagio.get());
-        }
-        if (grupo.getPreceptor()!=null && grupo.getPreceptor().getId()!=null){
-            Optional<Preceptor> optionalPreceptor = preceptorRepository.findById(grupo.getPreceptor().getId());
-            grupo.setPreceptor(null);
-            if(optionalPreceptor.isPresent()) grupo.setPreceptor(optionalPreceptor.get());
-        }
-
+        fill(grupo, grupo);
         Grupo grupoSaved = grupoRepository.save(grupo);
 
         return ResponseEntity.ok(grupoSaved);
     }
 
     @PutMapping
-    public ResponseEntity<Grupo> alter(@RequestBody Grupo grupo){
+    public ResponseEntity<Grupo> alter(@RequestBody Grupo input){
+        Optional<Grupo> optionalGrupo = null;
+        if(input.getId() != null ) {
+            optionalGrupo = grupoRepository.findById(input.getId());
+            if(!optionalGrupo.isPresent()) {
+                return ResponseEntity.notFound().build();
+            }
+        }
+        Grupo grupo = optionalGrupo.get();
+        fill(grupo, input);
+
         Grupo grupoSaved = grupoRepository.save(grupo);
         return ResponseEntity.ok(grupoSaved);
     }
@@ -165,4 +160,28 @@ public class GrupoController {
         }
         return ResponseEntity.noContent().build();
     }
+
+    private void fill(Grupo grupo, Grupo origem) {
+        grupo.setNome(origem.getNome());
+        grupo.setDataInicio(origem.getDataInicio());
+        grupo.setDataFim(origem.getDataFim());
+        grupo.setTurno(origem.getTurno());
+
+        if(origem.getDisciplina()!=null && origem.getDisciplina().getId()!=null) {
+            Optional<Disciplina> optionalDisciplina = disciplinaRepository.findById(origem.getDisciplina().getId());
+            grupo.setDisciplina(null);
+            if (optionalDisciplina.isPresent()) grupo.setDisciplina(optionalDisciplina.get());
+        }
+        if (origem.getCampoEstagio()!=null && origem.getCampoEstagio().getId()!=null){
+            Optional<CampoEstagio> optionalCampoEstagio = campoEstagioRepository.findById(origem.getCampoEstagio().getId());
+            grupo.setCampoEstagio(null);
+            if(optionalCampoEstagio.isPresent()) grupo.setCampoEstagio(optionalCampoEstagio.get());
+        }
+        if (origem.getPreceptor()!=null && origem.getPreceptor().getId()!=null){
+            Optional<Preceptor> optionalPreceptor = preceptorRepository.findById(origem.getPreceptor().getId());
+            grupo.setPreceptor(null);
+            if(optionalPreceptor.isPresent()) grupo.setPreceptor(optionalPreceptor.get());
+        }
+    }
+
 }

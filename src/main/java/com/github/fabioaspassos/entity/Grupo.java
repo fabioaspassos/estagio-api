@@ -26,6 +26,9 @@ public class Grupo {
     @Column
     private LocalDate dataFim;
 
+    @Column
+    private String turno;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "escala_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
